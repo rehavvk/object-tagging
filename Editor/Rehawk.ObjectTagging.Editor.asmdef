@@ -1,0 +1,18 @@
+{
+    "name": "Rehawk.ObjectTagging.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:deb16aa85bfe78d47b4829ed7de1952f"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
