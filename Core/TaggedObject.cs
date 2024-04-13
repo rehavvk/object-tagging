@@ -11,6 +11,18 @@ namespace Rehawk.ObjectTagging
             return HasTags(ObjectTaggingUtility.TagsToMask(tags));
         }
         
+        public bool HasAnyTag(params string[] tags)
+        {
+            for (int i = 0; i < tags.Length; i++)
+            {
+                int flag = ObjectTaggingUtility.TagToLayer(tags[i]);
+                if ((tagsMask & flag) == flag)
+                    return true;
+            }
+
+            return false;
+        }
+        
         public bool HasTags(int tagsMask)
         {
             int mask = this.tagsMask.Value;
