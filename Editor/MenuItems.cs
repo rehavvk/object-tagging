@@ -4,7 +4,7 @@ namespace Rehawk.ObjectTagging
 {
     public static class MenuItems
     {
-        [MenuItem("Tools/Object Tagging/Bake")]
+        [MenuItem("Tools/Bake Object Tags")]
         private static void BakeKeys()
         {
             ObjectTagBaker.Bake();

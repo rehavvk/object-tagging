@@ -57,9 +57,9 @@ namespace Rehawk.ObjectTagging
                 }
             }
 
-            if (GUI.Button(buttonRect, "T"))
+            if (GUI.Button(buttonRect, new GUIContent("T", "Show Tags")))
             {
-                Selection.activeObject = ObjectTaggingSettings.Instance;
+                SettingsService.OpenProjectSettings("Project/Object Tagging");
             }
         }
     }

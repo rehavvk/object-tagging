@@ -13,7 +13,7 @@ namespace Rehawk.ObjectTagging
 
         public static void Bake()
         {
-            string path = EditorUtility.SaveFilePanel("Save object tag file", "", "ObjectTags.cs", "cs");
+            string path = EditorUtility.SaveFilePanel("Save object tag file", Application.dataPath, "ObjectTags.cs", "cs");
 
             if (path.Length != 0)
             {
