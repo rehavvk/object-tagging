@@ -23,5 +23,25 @@ namespace Rehawk.ObjectTagging
 
             return false;
         }
+        
+        public static bool HasAnyTag(this GameObject obj, params string[] tags)
+        {
+            if (obj.TryGetComponent(out TaggedObject objectTags))
+            {
+                return objectTags.HasAnyTag(tags);
+            }
+
+            return false;
+        }
+        
+        public static bool HasAnyTag(this GameObject obj, int tagsMask)
+        {
+            if (obj.TryGetComponent(out TaggedObject objectTags))
+            {
+                return objectTags.HasAnyTag(tagsMask);
+            }
+
+            return false;
+        }
     }
 }

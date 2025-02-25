@@ -11,6 +11,12 @@ namespace Rehawk.ObjectTagging
             return HasTags(ObjectTaggingUtility.TagsToMask(tags));
         }
         
+        public bool HasTags(int tagsMask)
+        {
+            int mask = this.tagsMask.Value;
+            return (mask | tagsMask) == mask;
+        }
+        
         public bool HasAnyTag(params string[] tags)
         {
             for (int i = 0; i < tags.Length; i++)
@@ -23,10 +29,9 @@ namespace Rehawk.ObjectTagging
             return false;
         }
         
-        public bool HasTags(int tagsMask)
+        public bool HasAnyTag(int tagsMask)
         {
-            int mask = this.tagsMask.Value;
-            return (mask | tagsMask) == mask;
+            return HasAnyTag(ObjectTaggingUtility.MaskToTags(tagsMask));
         }
     }
 }

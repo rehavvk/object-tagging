@@ -19,6 +19,14 @@ namespace Rehawk.ObjectTagging
             return mask;
         }
         
+        public static string LayerToTag(int layer)
+        {
+            string[] availableTags = ObjectTaggingSettings.Tags;
+
+            int index = (int) Math.Log(layer, 2);
+            return availableTags[index];
+        }
+        
         public static int TagsToMask(string[] tags)
         {
             string[] availableTags = ObjectTaggingSettings.Tags;

@@ -8,11 +8,6 @@ namespace Rehawk.ObjectTagging
     {
         [SerializeField] private string[] tags = Array.Empty<string>();
        
-        public string[] Tags
-        {
-            get { return tags; }
-        }
-        
         public int Value
         {
             get { return ObjectTaggingUtility.TagsToMask(tags); }
@@ -24,11 +19,11 @@ namespace Rehawk.ObjectTagging
             return mask.Value;
         }
 
-        public static implicit operator TagMask(int intVal)
+        public static implicit operator TagMask(int intValue)
         {
             return new TagMask
             {
-                Value = intVal
+                Value = intValue
             };
         }
     }
